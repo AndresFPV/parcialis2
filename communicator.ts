@@ -27,17 +27,17 @@ class IddleState implements NetworkState{
     
     red: NetworkCommunicator
     
-    constructor(red : NetworkState)
+    constructor(red : NetworkCommunicator)
     {
-        this.red.state = red
+        this.red.state = red.state
     }
     
     iniciar(){
         //lazy initialization
-        if (this.red.state = null)
+        /*if (this.red.state = null)
         {
-            this.red.state = new IddleState(this.red.state)
-        }
+            this.red.state = new IddleState(this.red)
+        }*/
     }
 
     error()
@@ -52,17 +52,12 @@ class TransmittingState implements NetworkState
 {
     red: NetworkCommunicator
     
-    constructor(red : NetworkState)
+    constructor(red : NetworkCommunicator)
     {
-        this.red.state = red
+        this.red.state = red.state
     }
     
     iniciar(){
-        //lazy initialization
-        if (this.red.state = null)
-        {
-            this.red.state = new IddleState(this.red.state)
-        }
     }
 
     error()
@@ -79,17 +74,12 @@ class ErrorState implements NetworkState
 {
     red: NetworkCommunicator
     
-    constructor(red : NetworkState)
+    constructor(red : NetworkCommunicator)
     {
-        this.red.state = red
+        this.red.state = red.state
     }
     
     iniciar(){
-        //lazy initialization
-        if (this.red.state = null)
-        {
-            this.red.state = new IddleState(this.red.state)
-        }
     }
 
     error()
